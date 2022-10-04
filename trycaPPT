@@ -1,0 +1,18 @@
+import random
+
+def play():
+    usr = input("Introueix 'PD' per seleccionar pedra, 'PP' per paper o 'TS' per tissores: ")
+    npc = random.choice(['PD','PP','TS'])
+
+    if usr == npc:
+        return "Empat :3"
+
+    if victory (usr,npc):
+        return "Victoria Magistral #1 xd."
+    return "Has perdut :( F."
+
+def victory(j1, cpu): 
+    if (j1 == 'PD' and cpu == 'TS') or (j1 == 'TS' and cpu == 'PP') or (j1 == 'PP' and cpu == 'PD'):
+        return True
+
+print(play())
